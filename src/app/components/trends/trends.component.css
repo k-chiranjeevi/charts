@@ -1,0 +1,12 @@
+.size {
+    width: 49%;
+    border:1px solid lightgray;
+}
+
+
+.row {
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+
+}

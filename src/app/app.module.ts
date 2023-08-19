@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrendsComponent } from './components/trends/trends.component';
-import { HighchartsChartModule } from 'highcharts-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardsComponent } from './components/dashboards/dashboards.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { DashboardsComponent } from './components/dashboards/dashboards.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     HighchartsChartModule,
-    HttpClientModule
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

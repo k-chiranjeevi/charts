@@ -1,0 +1,11 @@
+.bubbleContainer {
+    display: block;
+    width:49%;
+    height:400px;
+}
+
+
+.align {
+    display: flex;
+    justify-content: space-between;
+}

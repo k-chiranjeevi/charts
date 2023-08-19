@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
+
+
 @Component({
   selector: 'app-trends',
   templateUrl: './trends.component.html',
@@ -8,8 +10,8 @@ import * as Highcharts from 'highcharts';
 })
 
 export class TrendsComponent {
-
   Highcharts: typeof Highcharts = Highcharts;
+
 
   barChartseriesData = [
     {
@@ -33,7 +35,7 @@ export class TrendsComponent {
     data: [200, 350, 450, 500, 650, 490, 410, 450, 600, 650, 570, 300]
   }]
 
-  barChartoptions = {
+  barChartoptions: Highcharts.Options = {
     chart: {
       type: "bar",
     },
@@ -79,7 +81,7 @@ export class TrendsComponent {
     },
   };
 
-  lineChartOptions = {
+  lineChartOptions: Highcharts.Options = {
     chart: {
       type: 'line'
     },
@@ -101,83 +103,18 @@ export class TrendsComponent {
       }
     },
     series: this.lineChartseriesData as Highcharts.SeriesOptionsType[]
-  } 
+  }
 
-bubbledata = [{
-  data:[
-    {
-      x: 95,
-      y: 95,
-      z: 13.8,
-      name: 'BE',
-    },
-]
-
-}]
- 
-  bubbleChartOptions: Highcharts.Options = {
-    chart: {
-      type: 'bubble',
-      plotBorderWidth: 1,
-    },
-    legend: {
-      bubbleLegend: {
-          enabled: true
-      }
-  },
-
-    title: {
-      text: 'Sugar and fat intake per country'
-    },
-    xAxis: {
-      gridLineWidth: 1,
-      title: {
-        text: 'Daily fat intake'
+  bubbledata = [{
+    data: [
+      {
+        x: 95,
+        y: 95,
+        z: 13.8,
+        name: 'BE',
       },
-      labels: {
-        format: '{value} gr'
-      },
-      accessibility: {
-        rangeDescription: 'Range: 60 to 100 grams.'
-      }
-    },
+    ]
 
-    yAxis: {
-      startOnTick: false,
-      endOnTick: false,
-      title: {
-        text: 'Daily sugar intake'
-      },
-      labels: {
-        format: '{value} gr'
-      },
-      maxPadding: 0.2,
-      accessibility: {
-        rangeDescription: 'Range: 0 to 160 grams.'
-      }
-    },
+  }]
 
-    tooltip: {
-      useHTML: true,
-      headerFormat: '<table>',
-      pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
-        '<tr><th>Fat intake:</th><td>{point.x}g</td></tr>' +
-        '<tr><th>Sugar intake:</th><td>{point.y}g</td></tr>' +
-        '<tr><th>Obesity (adults):</th><td>{point.z}%</td></tr>',
-      footerFormat: '</table>',
-      followPointer: true
-    },
-
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: '{point.name}'
-        }
-      }
-    },
-
-    series: this.bubbledata as any
-  
-}
 }

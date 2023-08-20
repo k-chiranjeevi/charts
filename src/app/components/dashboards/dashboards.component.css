@@ -1,11 +1,34 @@
 .bubbleContainer {
-    display: block;
-    width:49%;
-    height:400px;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom:70px;
 }
-
 
 .align {
     display: flex;
     justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftBox {
+    width:74%;
+}
+
+.rightBox {
+    width: 24%; 
+}
+
+
+.item {
+    width:200px;
+}
+
+.seconRow {
+    margin-top: 40px;
 }

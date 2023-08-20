@@ -1,0 +1,18 @@
+.chart {
+    width: 500px;
+}
+
+.chartHeight {
+    height: 200px;
+    display: block;
+}
+
+.pieChart {
+    height: 300px;
+    display: block;
+}
+
+tr:nth-child(even){
+    background-color: rgb(246, 245, 245);
+}
+        

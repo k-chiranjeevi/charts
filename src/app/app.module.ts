@@ -7,21 +7,27 @@ import { TrendsComponent } from './components/trends/trends.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardsComponent } from './components/dashboards/dashboards.component';
 import { HighchartsChartModule } from 'highcharts-angular';
-
 import { NgChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableChartsComponent } from './components/table-charts/table-charts.component';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TrendsComponent,
-    DashboardsComponent
+    DashboardsComponent,
+    TableChartsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     HighchartsChartModule,
-    NgChartsModule
+    NgChartsModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

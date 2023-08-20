@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
-
-
 @Component({
   selector: 'app-trends',
   templateUrl: './trends.component.html',
@@ -11,7 +9,6 @@ import * as Highcharts from 'highcharts';
 
 export class TrendsComponent {
   Highcharts: typeof Highcharts = Highcharts;
-
 
   barChartseriesData = [
     {
